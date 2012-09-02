@@ -19,7 +19,7 @@ Use these values for the jumbyl application. You can leave all the others blank.
 
 <table>
   <tr><th>Application Name:</th><td>jumbyl</td></tr>
-  <tr><th>Default callback URL:</th><td>http://localhost:3000/oauthed</td></tr>
+  <tr><th>Default callback URL:</th><td>http://localhost:8080/complete</td></tr>
 </table>
 
 Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into `_tumblr-oath.yml`.
