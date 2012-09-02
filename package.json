@@ -10,9 +10,9 @@
   "dependencies": {
     "colors": "~0.6.0",
     "js-yaml": "~1",
-    "node-router": "0.0.3",
     "nopt": "~1.0.10",
     "oauth": "~0.9",
+    "openurl": "~1.1.0",
     "underscore": "~1.2.4"
   },
   "bin": {
