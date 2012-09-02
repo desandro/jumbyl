@@ -12,8 +12,8 @@ npm install jumbyl
 
 ### Register a Tumblr App
 
-+ Go to [www.tumblr.com/oauth/apps](http://www.tumblr.com/oauth/apps)
-+ Click + Register application
++ Go to [**www.tumblr.com/oauth/apps**](http://www.tumblr.com/oauth/apps)
++ Click **+ Register application**
 
 Use these values for the jumbyl application. You can leave all the others blank.
 
@@ -25,8 +25,9 @@ Use these values for the jumbyl application. You can leave all the others blank.
 Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into `_tumblr-oath.yml`.
 
 ``` yaml
-consumer_key: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
-consumer_secret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+# these keys will not work, copy/paste in your own
+consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
+consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
 ```
 
 ``` bash
