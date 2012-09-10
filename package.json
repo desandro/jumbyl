@@ -8,12 +8,13 @@
   },
   "repository": "",
   "dependencies": {
-    "colors": "~0.6.0",
-    "js-yaml": "~1",
-    "nopt": "~1.0.10",
-    "oauth": "~0.9",
-    "openurl": "~1.1.0",
-    "underscore": "~1.2.4"
+    "colors": "0.6.x",
+    "js-yaml": "1.x",
+    "hogan.js": "2.0.x",
+    "nopt": "1.0.x",
+    "oauth": "0.9.x",
+    "openurl": "1.1.x",
+    "underscore": "1.2.x"
   },
   "bin": {
     "jumbyl": "bin/jumbyl-bin.js"
