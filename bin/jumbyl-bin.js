@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var jumbyl = require('../lib/jumbyl');
+
 var nopt = require('nopt');
 
 var parsedOpts = nopt( {}, {}, process.argv );
