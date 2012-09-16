@@ -34,6 +34,10 @@ var jumbyl = require('../lib/jumbyl');
 var fileParts;
 var noYamlFilePath = 'test/dummy/no-yaml.mdown';
 
+// test for file that's not there
+fileParts = jumbyl.getFileParts('foo');
+fileParts.should.not.be.ok;
+
 fileParts = jumbyl.getFileParts( noYamlFilePath );
 fileParts.should.not.have.property('frontMatter');
 fileParts.should.have.property('content');
@@ -41,4 +45,8 @@ fileParts.should.have.property('content');
 var noYamlContent = fs.readFileSync( noYamlFilePath, 'utf8' );
 fileParts.content.should.equal( noYamlContent );
 
+fileParts = jumbyl.getFileParts('test/dummy/animals.mdown');
+fileParts.content.should.equal("My favorite is a lion.\n---\nNot a bear.\n")
+// console.log( fileParts.frontMatter );
+fileParts.frontMatter.should.equal("\nlion: barbary\ntiger: siberian\nbear: grizzly\n")
 
