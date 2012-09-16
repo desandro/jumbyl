@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 
+var path = require('path');
+
 var jumbyl = require('../lib/jumbyl');
 
-var nopt = require('nopt');
+// get command line arguments
+var args = process.argv.slice(2);
 
-var parsedOpts = nopt( {}, {}, process.argv );
+// if `jumbyl auth`
+if ( args[0] === 'auth' ) {
+  jumbyl.auth();
+  return;
+}
 
-// console.log( 'yo I am in a bin', process.argv, parsedOpts );
-console.log( process.cwd() );
+// otherwise post file
+jumbyl.post( args[0] );

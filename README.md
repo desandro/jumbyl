@@ -10,8 +10,6 @@ npm install jumbyl
 
 ## Setup
 
-### Register a Tumblr App
-
 + Go to [**www.tumblr.com/oauth/apps**](http://www.tumblr.com/oauth/apps)
 + Click **+ Register application**
 
@@ -42,9 +40,12 @@ if there is a `.gitignore`, jumbyl will add `_tumblr-oath.yml` to it.
 jumbyl my-post.md
 ```
 
+Posts with ids with be used to aedit
+
+jumbyl will ad After successfully posting, jumbyl will add the tumblr post id to the file's YAML Front Matter.
+
 ## Options
 
-Read format from filetype
-
-
 Options for your post can be set with YAML Front Matter
+
+Additionally, the format of the post will be read from the post's file extention. I.E. Posts that use `.markdown` `.md` `.mkdn` `.mdown`, will be set as `format: 'markdown'`.
