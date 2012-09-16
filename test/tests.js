@@ -47,11 +47,19 @@ post.content.should.equal( noYamlContent );
 
 // test file with YAML front matter
 post = jumbyl.parsePostFile('test/dummy/animals.mdown');
-post.content.should.equal("My favorite is a lion.\n---\nNot a bear.\n")
-post.frontMatter.should.equal("\nlion: barbary\ntiger: siberian\nbear: grizzly\n")
-post.data.should.equal({
-  lion: 'barbary',
-  tiger: 'siberian',
-  bear: 'grizzly'
-});
+post.basename.should.equal('animals.mdown');
+post.extname.should.equal('.mdown');
+post.content.should.equal('My favorite is a lion.\n---\nNot a bear.\n');
+post.frontMatter.should.equal('\nlion: barbary\ntiger: siberian\nbear: grizzly\n');
+post.data.lion.should.equal('barbary');
+post.data.tiger.should.equal('siberian');
+post.data.bear.should.equal('grizzly');
+
+// -------------------------- getTumblrParams -------------------------- //
+
+post = jumbyl.parsePostFile('test/dummy/paper-rad.mdown');
+var params = jumbyl.getTumblrParams( post );
+params.description.should.equal('Pretty awesome site\n');
+params.tags.should.equal('illustration,animation,Ben Jones');
+params.format.should.equal('markdown');
 
