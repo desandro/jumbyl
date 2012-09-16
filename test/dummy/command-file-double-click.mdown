@@ -1,0 +1,30 @@
+---
+
+title: .command files can be double-clicked
+tags: [ bash, command line, OS X ]
+format: markdown
+
+layout: default
+
+---
+
+From Chris Page on [Stack Overflow: How do I make this file.sh executable via double click?](http://stackoverflow.com/a/9650209/182183):
+
+> By default, *.sh files are opened in a text editor (Xcode or TextEdit). To create a shell script that will execute in Terminal when you open it, name it with the “command” extension, e.g., file.command. By default, these are sent to Terminal, which will execute the file as a shell script.
+>
+> You will also need to ensure the file is executable, e.g.:
+>
+>     chmod +x file.command
+
+Works also for [`.tool` files](http://apple.stackexchange.com/a/25261).
+
+Combine this with [Allow .command files to determine working directory - Mac OS X Hints](http://hints.macworld.com/article.php?story=20041217111834902) (from '04) and you have a low-level interface to allow non-technical colleagues run command line scripts.
+
+The command line is a great and powerful tool for any capable developer, but to most non-technical users and colleagues, it is an uncomforting, alien black box. Ideally, any set of directions meant for everybody on your team should never include "open up Terminal." `.command` files provide a mechanism to bridge this gap. 
+
+---
+
+In the couple years that dropshado.ws has been dropping shadows, this is one of my favorite finds.
+
+1. It's way old.
+2. It's a bridge between the command line and the GUI.

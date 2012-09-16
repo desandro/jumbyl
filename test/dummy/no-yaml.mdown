@@ -1,0 +1,5 @@
+This is my file without YAML.
+
+---
+
+That was a break.

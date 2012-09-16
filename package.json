@@ -14,7 +14,11 @@
     "nopt": "1.0.x",
     "oauth": "0.9.x",
     "openurl": "1.1.x",
+    "tumblrwks": "0.1.x",
     "underscore": "1.2.x"
+  },
+  "devDependencies": {
+    "should": "1.x"
   },
   "bin": {
     "jumbyl": "bin/jumbyl-bin.js"
