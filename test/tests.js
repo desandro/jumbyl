@@ -28,25 +28,30 @@ var jumbyl = require('../lib/jumbyl');
 // jumbyl.post('test/dummy/command-file-double-click.mdown')
 
 
-// -------------------------- getFileParts -------------------------- //
+// -------------------------- parsePostFile -------------------------- //
 
+var post;
 // no-yaml.mdown has a `---` but does not have actual YAML
-var fileParts;
 var noYamlFilePath = 'test/dummy/no-yaml.mdown';
 
 // test for file that's not there
-fileParts = jumbyl.getFileParts('foo');
-fileParts.should.not.be.ok;
+post = jumbyl.parsePostFile('foo');
+post.should.not.be.ok;
 
-fileParts = jumbyl.getFileParts( noYamlFilePath );
-fileParts.should.not.have.property('frontMatter');
-fileParts.should.have.property('content');
+post = jumbyl.parsePostFile( noYamlFilePath );
+post.should.not.have.property('frontMatter');
+post.should.have.property('content');
 // content should match actual file contents
 var noYamlContent = fs.readFileSync( noYamlFilePath, 'utf8' );
-fileParts.content.should.equal( noYamlContent );
+post.content.should.equal( noYamlContent );
 
-fileParts = jumbyl.getFileParts('test/dummy/animals.mdown');
-fileParts.content.should.equal("My favorite is a lion.\n---\nNot a bear.\n")
-// console.log( fileParts.frontMatter );
-fileParts.frontMatter.should.equal("\nlion: barbary\ntiger: siberian\nbear: grizzly\n")
+// test file with YAML front matter
+post = jumbyl.parsePostFile('test/dummy/animals.mdown');
+post.content.should.equal("My favorite is a lion.\n---\nNot a bear.\n")
+post.frontMatter.should.equal("\nlion: barbary\ntiger: siberian\nbear: grizzly\n")
+post.data.should.equal({
+  lion: 'barbary',
+  tiger: 'siberian',
+  bear: 'grizzly'
+});
 
