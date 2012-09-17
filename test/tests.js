@@ -57,9 +57,22 @@ post.data.bear.should.equal('grizzly');
 
 // -------------------------- getTumblrParams -------------------------- //
 
+// test munging of post YAML into what Tumblr uses
 post = jumbyl.parsePostFile('test/dummy/paper-rad.mdown');
 var params = jumbyl.getTumblrParams( post );
 params.description.should.equal('Pretty awesome site\n');
 params.tags.should.equal('illustration,animation,Ben Jones');
 params.format.should.equal('markdown');
 
+// -------------------------- writeId -------------------------- //
+
+// adds id to the post file
+jumbyl.writeId( '12345', post );
+post = jumbyl.parsePostFile('test/dummy/paper-rad.mdown');
+post.data.id.should.equal('12345');
+// reset file
+fs.writeFile( post.resolvedFilePath, post.file.replace( /\nid:.+\n/, '\n' ) );
+
+// -------------------------- post -------------------------- //
+
+// jumbyl.post('test/dummy/paper-rad.mdown');
