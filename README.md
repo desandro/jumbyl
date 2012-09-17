@@ -5,8 +5,10 @@ Post to Tumblr with static files, like [Jekyll](http://github.com/mojombo/jekyll
 ## Install
 
 ``` bash
-npm install jumbyl
+npm install jumbyl -g
 ```
+
+Jumbyl is a command-line tool. Installing it globally will add the `jumbyl` command.
 
 ## Setup
 
@@ -20,10 +22,11 @@ Use these values for the jumbyl application. You can leave all the others blank.
   <tr><th>Default callback URL:</th><td>http://localhost:8080/complete</td></tr>
 </table>
 
-Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into `_tumblr-oath.yml`.
+Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into `_jumbyl.yml`.
 
 ``` yaml
 # these keys will not work, copy/paste in your own
+baseHostname: your_blog.tumblr.com
 consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
 consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
 ```
@@ -32,7 +35,7 @@ consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
 jumbyl auth
 ```
 
-if there is a `.gitignore`, jumbyl will add `_tumblr-oath.yml` to it.
+if there is a `.gitignore`, jumbyl will add `_jumbyl.yml` to it.
 
 ## Usage
 
@@ -40,12 +43,12 @@ if there is a `.gitignore`, jumbyl will add `_tumblr-oath.yml` to it.
 jumbyl my-post.md
 ```
 
-Posts with ids with be used to aedit
+Posts with ids with be used to edit
 
-jumbyl will ad After successfully posting, jumbyl will add the tumblr post id to the file's YAML Front Matter.
+After successfully posting, jumbyl will add the tumblr post id to the file's YAML Front Matter.
 
 ## Options
 
-Options for your post can be set with YAML Front Matter
+Options for your post can be set with YAML Front Matter.
 
 Additionally, the format of the post will be read from the post's file extention. I.E. Posts that use `.markdown` `.md` `.mkdn` `.mdown`, will be set as `format: 'markdown'`.

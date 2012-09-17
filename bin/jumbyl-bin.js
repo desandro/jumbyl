@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-var path = require('path');
-
 var jumbyl = require('../lib/jumbyl');
 
 // get command line arguments
