@@ -10,24 +10,6 @@ var fs = require('fs');
 
 var jumbyl = require('../lib/jumbyl');
 
-// -------------------------- tests -------------------------- //
-
-// console.log( jumbyl );
-
-// var config = jumbyl.getConfig()
-// console.log( config );
-
-// jumbyl.auth();
-
-// Will pass
-// assert.ok(true);
-
-// Will throw an exception
-// assert.ok(false);
-
-// jumbyl.post('test/dummy/command-file-double-click.mdown')
-
-
 // -------------------------- parsePostFile -------------------------- //
 
 var post;
@@ -68,6 +50,7 @@ params.format.should.equal('markdown');
 
 // adds id to the post file
 jumbyl.writeId( '12345', post );
+// get YAML data
 post = jumbyl.parsePostFile('test/dummy/paper-rad.mdown');
 post.data.id.should.equal('12345');
 // reset file
