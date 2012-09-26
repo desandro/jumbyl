@@ -26,9 +26,9 @@ Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer 
 
 ``` yaml
 # these keys will not work, copy/paste in your own
-baseHostname: your_blog.tumblr.com
-consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
-consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+base_hostname: your_blog.tumblr.com
+consumer_key: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
+consumer_secret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
 ```
 
 ``` bash
