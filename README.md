@@ -39,13 +39,15 @@ if there is a `.gitignore`, jumbyl will add `_jumbyl.yml` to it.
 
 ## Usage
 
+To post to Tumblr, specify a file with `jumbyl`
+
 ``` bash
 jumbyl my-post.md
 ```
 
-Posts with ids with be used to edit
+After successfully posting, jumbyl will add the tumblr post `id` to the file's YAML Front Matter.
 
-After successfully posting, jumbyl will add the tumblr post id to the file's YAML Front Matter.
+To edit a post, the file will need an `id` parameter, so you can use the same command.
 
 ## Parameters
 
@@ -75,12 +77,12 @@ The content of the post will be set to the appropriate parameter for the type of
 
 <table>
   <tr><th>text</th><td>body</td></tr>
-  <tr><th>link<th><td>description</td></tr>
-  <tr><th>chat<th><td>conversation</td></tr>
-  <tr><th>quote<th><td>quote</td></tr>
-  <tr><th>photo<th><td>caption</td></tr>
-  <tr><th>audio<th><td>caption</td></tr>
-  <tr><th>video<th><td>caption</td></tr>
+  <tr><th>link</th><td>description</td></tr>
+  <tr><th>chat</th><td>conversation</td></tr>
+  <tr><th>quote</th><td>quote</td></tr>
+  <tr><th>photo</th><td>caption</td></tr>
+  <tr><th>audio</th><td>caption</td></tr>
+  <tr><th>video</th><td>caption</td></tr>
 </table>
 
 Additionally, the format of the post will be read from the post's file extention. I.E. Posts that use `.markdown` `.md` `.mkdn` `.mdown`, will be set as `format: 'markdown'`.
