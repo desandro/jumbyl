@@ -26,16 +26,20 @@ Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer 
 
 ``` yaml
 # these keys will not work, copy/paste in your own
-base_hostname: your_blog.tumblr.com
-consumer_key: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
-consumer_secret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+baseHostname: your_blog.tumblr.com
+consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
+consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+token: __token__
+token_secret: __token_secret__
 ```
+
+Cheat and copy these from the [Tumblr API Console](https://api.tumblr.com/console/calls/user/info)
+
+## Don't use this yet
 
 ``` bash
 jumbyl auth
 ```
-
-if there is a `.gitignore`, jumbyl will add `_jumbyl.yml` to it.
 
 ## Usage
 
