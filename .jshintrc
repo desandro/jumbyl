@@ -1,4 +1,6 @@
 {
   "devel": true,
-  "node": true
+  "node": true,
+  "undef": true,
+  "unused": true
 }

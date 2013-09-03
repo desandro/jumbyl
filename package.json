@@ -1,6 +1,6 @@
 {
   "name": "jumbyl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "post to Tumblr from text files, like Jekyll",
   "main": "app.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "nopt": "1.0.x",
     "openurl": "1.1.x",
     "request": "2.x",
-    "tumblrwks": "0.1.x",
-    "underscore": "1.2.x"
+    "underscore": "1.2.x",
+    "tumblr.js": "~0.0.4"
   },
   "devDependencies": {
     "should": "1.x"
