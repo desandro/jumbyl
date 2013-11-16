@@ -2,6 +2,10 @@
 
 Post to Tumblr with static files, like [Jekyll](http://github.com/mojombo/jekyll)
 
+## Warning
+
+This project is still in development. I don't think it actually works for public use just yet.
+
 ## Install
 
 ``` bash
