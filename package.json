@@ -1,6 +1,6 @@
 {
   "name": "jumbyl",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "post to Tumblr from text files, like Jekyll",
   "main": "lib/jumbyl.js",
   "scripts": {
