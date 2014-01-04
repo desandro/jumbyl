@@ -1,12 +1,15 @@
 {
   "name": "jumbyl",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "post to Tumblr from text files, like Jekyll",
-  "main": "app.js",
+  "main": "lib/jumbyl.js",
   "scripts": {
     "test": "node test/tests.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/desandro/jumbyl.git"
+  },
   "dependencies": {
     "colors": "0.6.x",
     "js-yaml": "1.x",
@@ -24,7 +27,6 @@
     "jumbyl": "bin/jumbyl-bin.js"
   },
   "keywords": [
-    "jumbyl",
     "tumblr",
     "jekyll",
     "yaml"

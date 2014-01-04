@@ -23,26 +23,19 @@ Use these values for the jumbyl application. You can leave all the others blank.
 
 <table>
   <tr><th>Application Name:</th><td>jumbyl</td></tr>
+  <tr><th>Administrative contact email:</th><td>your@email.com</td></tr>
   <tr><th>Default callback URL:</th><td>http://localhost:8080/complete</td></tr>
 </table>
 
-Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into `_jumbyl.yml`.
+Once you **Save changes**, copy the **OAuth consumer key** and **OAuth consumer secret** into the [Tumblr API Console](https://api.tumblr.com/console/calls/user/info) and **Authenticate**. You can now create a new file `_jumbyl.yml`, which will hold this OAuth info.
 
 ``` yaml
 # these keys will not work, copy/paste in your own
-baseHostname: your_blog.tumblr.com
-consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
-consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
-token: __token__
-token_secret: __token_secret__
-```
-
-Cheat and copy these from the [Tumblr API Console](https://api.tumblr.com/console/calls/user/info)
-
-## Don't use this yet
-
-``` bash
-jumbyl auth
+base_hostname: your_blog.tumblr.com # or your_blog.com
+consumer_key: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
+consumer_secret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+token: vd6ahUJ7mwjT8Ujf2NVWKNy2gHl6PC9lMthTUveNAMmenYF1Zi
+token_secret: txtOBchmvQReBIn9HYB2ZU5eVx3xyL3DlB3GmXsgYLaQdLfg7D
 ```
 
 ## Usage
@@ -100,3 +93,22 @@ Additionally, the format of the post will be read from the post's file extention
 Jumbyl pairs up nicely with Jekyll.
 
 For link posts, you can use `_url` in the YAML Front Matter, so it does not conflict with [Jekyll's template data](https://github.com/mojombo/jekyll/wiki/Template-Data) like `post.url`.
+
+## Future: auth
+
+> Warning: this feature does not work yet.
+
+After copying **OAuth consumer key** and **OAuth consumer secret** into a new file `_jumbyl.yml`, user should be able to auth.
+
+``` yaml
+# these keys will not work, copy/paste in your own
+base_hostname: your_blog.tumblr.com # or your_blog.com
+consumerKey: UveNAMmenYF1Zivd6ahUJWKNy2gHl6PC9lMthT7mwjT8Ujf2NV
+consumerSecret: dLfg7DB2ZU5eVx3xyL3DltxtOBchmvQReBIn9HYB3GmXsgYLaQ
+```
+
+Then `jumbyl auth` back in command line.
+
+``` bash
+jumbyl auth
+```
