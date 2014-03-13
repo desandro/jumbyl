@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-// var jumbyl = require('../lib/jumbyl');
-var jumbyl = require('/Users/dave/projects/jumbyl/lib/jumbyl');
+var jumbyl = require('../lib/jumbyl');
 
 // get command line arguments
 var args = process.argv.slice(2);
