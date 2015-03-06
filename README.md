@@ -98,7 +98,7 @@ Additionally, the format of the post will be read from the post's file extention
 
 Jumbyl pairs up nicely with Jekyll.
 
-For link posts, you can use `_url` in the YAML Front Matter, so it does not conflict with [Jekyll's template data](https://github.com/mojombo/jekyll/wiki/Template-Data) like `post.url`.
+For link posts, you can use `_url` in the YAML Front Matter, so it does not conflict with [Jekyll's template data](http://jekyllrb.com/docs/variables/) like `post.url`.
 
     ---
     title: TMNTPedia
